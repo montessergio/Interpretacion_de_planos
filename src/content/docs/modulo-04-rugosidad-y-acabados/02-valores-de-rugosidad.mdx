@@ -1,0 +1,67 @@
+---
+title: "4.2 Valores de rugosidad"
+description: "Series de valores Ra en µm y µin, clases N, valores típicos por proceso, aplicaciones y laboratorio de parámetros de perfil."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+## Valores preferentes de Ra y equivalencias
+
+| Clase N (histórica) | Ra (µm) | Ra (µin, valor preferente ASME) |
+|---|---|---|
+| N1 | 0.025 | 1 |
+| N2 | 0.05 | 2 |
+| N3 | 0.1 | 4 |
+| N4 | 0.2 | 8 |
+| N5 | 0.4 | 16 |
+| N6 | 0.8 | 32 |
+| N7 | 1.6 | 63 |
+| N8 | 3.2 | 125 |
+| N9 | 6.3 | 250 |
+| N10 | 12.5 | 500 |
+| N11 | 25 | 1000 |
+| N12 | 50 | 2000 |
+
+1 µm = 39.37 µin; por eso 0.8 µm ≈ 31.5 µin, que se normaliza a 32 µin. Las **clases N** son de uso histórico (ISO 1302 antigua): hoy se escribe el parámetro y el valor (por ejemplo, «Ra 0.8»). 🟡
+
+## Valores típicos de Ra por proceso (orientativos)
+
+| Proceso | Ra típica (µm) |
+|---|---|
+| Fundición en arena | 12.5 – 50 |
+| Forja en caliente | 3.2 – 12.5 |
+| Fundición a presión | 0.8 – 3.2 |
+| Fresado | 0.8 – 6.3 |
+| Torneado | 0.4 – 6.3 |
+| Taladrado | 1.6 – 12.5 |
+| Escariado | 0.4 – 3.2 |
+| Rectificado | 0.1 – 1.6 |
+| Bruñido (honing) | 0.05 – 0.8 |
+| Lapeado | 0.025 – 0.4 |
+| Pulido | 0.012 – 0.4 |
+
+⚠️ **Rangos orientativos** de práctica general: dependen de material, herramienta y parámetros de corte. Use la capacidad real del proceso de su planta; no exija un acabado más fino que el necesario, porque el costo aumenta rápidamente.
+
+## Orden de magnitud por función (guía)
+
+| Función | Ra usual (µm) |
+|---|---|
+| Superficies sin requisito funcional | 3.2 – 12.5 |
+| Superficies de apoyo y asiento general | 1.6 – 3.2 |
+| Ajustes deslizantes, asientos de rodamiento | 0.4 – 0.8 |
+| Ejes para sellos de labio | consulte el catálogo del fabricante del sello |
+| Superficies de lapeado, sellado de alta presión | ≤ 0.2 |
+
+⚠️ Guía general: **prevalece la recomendación del fabricante** del componente.
+
+## Laboratorio: parámetros de un perfil sintético
+
+Genere un perfil con un Ra objetivo y observe Ra, Rq, Rp, Rv, Rz por sección y Rsk. Cambie el proceso para ver cómo cambia el espaciamiento de las irregularidades.
+
+<Lab id="rugosidad" alto={820} titulo="Laboratorio de rugosidad de perfil" />
+
+## Cómo especificar
+
+- Pida **sólo lo necesario**: “Ra 1.6” en superficies funcionales y una nota general “Ra 3.2 salvo indicación” para el resto.
+- Indique el **parámetro** (no escriba sólo una clase N) y la **norma** de textura aplicable.
+- Si interesa evitar defectos aislados, añada Rz o Rp con su valor y regla de aceptación.
