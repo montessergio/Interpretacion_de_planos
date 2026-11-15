@@ -1,0 +1,21 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vistas ortogonales</title><link rel="stylesheet" href="../_shared/lab.css"><script type="importmap">{"imports":{"three":"../_vendor/three/build/three.module.js","three/addons/":"../_vendor/three/examples/jsm/"}}</script></head><body><main class="hoja">
+<h1>Vistas ortogonales: del modelo 3D al plano</h1>
+<p class="sub">Gire el modelo y compare con las vistas. Las líneas discontinuas son aristas ocultas. Cambie entre proyección de primer y tercer ángulo y observe cómo cambia la disposición.</p>
+<div class="panel fila">
+  <label>Sistema de proyección<select id="sis"><option value="tercer">Tercer ángulo (ASME / EE. UU.)<option value="primer">Primer ángulo (ISO / Europa)</select></label>
+  <label>Vistas<select id="nv"><option value="3">3 principales<option value="6">6 vistas</select></label>
+  <label><span><input type="checkbox" id="ocultas" checked> Líneas ocultas</span></label>
+  <label><span><input type="checkbox" id="guias" checked> Guías de proyección</span></label>
+  <div id="simbolo" aria-label="Símbolo del método de proyección"></div>
+</div>
+<p id="aviso" class="error" role="alert"></p>
+<div class="fila" style="align-items:flex-start">
+  <div class="panel" style="flex:1 1 260px"><h2>Modelo 3D</h2><div id="v3d" style="aspect-ratio:1;width:100%;touch-action:none"></div><p class="sub">Pieza en “L” 60 × 50 × 30 mm, agujero pasante Ø10 y chaflán de 5 mm.</p></div>
+  <div class="panel" style="flex:3 1 520px"><h2>Vistas</h2>
+    <div id="rejilla" style="position:relative;aspect-ratio:4/3;width:100%;background:#fff;border:1px solid #9aa8bd">
+      <canvas id="cv" style="position:absolute;inset:0;width:100%;height:100%"></canvas>
+      <svg id="ov" viewBox="0 0 400 300" preserveAspectRatio="none" style="position:absolute;inset:0;width:100%;height:100%;pointer-events:none"></svg>
+      <div id="etq" style="position:absolute;inset:0;pointer-events:none"></div></div></div>
+</div>
+<div class="cajetin"><span>ISO 5456-2 · ISO 128-3:2022 · ASME Y14.3</span><span>Unidades: mm</span><span>Interpretación de planos · Módulo 1</span></div>
+</main><script type="module" src="main.js"></script></body></html>

@@ -1,0 +1,19 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GDT: posicion con MMC y sujetadores</title><link rel="stylesheet" href="../_shared/lab.css"></head><body><main class="hoja">
+<h1>GD&amp;T · Tolerancia de posición y sujetadores</h1>
+<p class="sub">Bonus por condición de material (MMC/LMC), condición virtual y tolerancia de posición para sujetadores fijos y flotantes. Use las mismas unidades en todos los campos.</p>
+<div class="fila"><section class="panel" style="flex:1 1 380px"><h2>1 · Posición de un elemento de tamaño</h2>
+<form class="fila" onsubmit="return false">
+<label>Elemento<select id="car"><option value="agujero">Agujero (interno)<option value="eje">Eje (externo)</select></label>
+<label>Modificador<select id="mod"><option>MMC<option>LMC<option>RFS</select></label>
+<label>Tamaño mín<input id="min" type="number" step="any" value="10"></label><label>Tamaño máx<input id="max" type="number" step="any" value="10.2"></label>
+<label>Tol. posición Ø<input id="tol" type="number" step="any" value="0.2"></label>
+<label>Tamaño real<input id="real" type="number" step="any" value="10.15"></label>
+<label>Desv. x<input id="dx" type="number" step="any" value="0.12"></label><label>Desv. y<input id="dy" type="number" step="any" value="0.10"></label></form>
+<p id="err" class="error" role="alert"></p><div id="res" aria-live="polite"></div>
+<svg id="zona" viewBox="0 0 220 220" width="220" role="img" aria-label="Zona de tolerancia de posición y centro medido"></svg></section>
+<section class="panel" style="flex:1 1 300px"><h2>2 · Sujetadores (ISO 273)</h2>
+<form class="fila" onsubmit="return false"><label>Rosca<select id="m"></select></label><label>Serie<select id="serie"><option value="0">Fina<option value="1" selected>Media<option value="2">Gruesa</select></label>
+<label>Montaje<select id="tipo"><option value="flotante">Flotante<option value="fijo">Fijo</select></label></form><div id="fas" aria-live="polite"></div>
+<p class="sub">Flotante: T = H − F. Fijo: T = (H − F)/2. H = agujero de paso en MMC (mínimo); F = sujetador en MMC (diámetro máximo; aquí el nominal).</p></section></div>
+<div class="cajetin"><span>ASME Y14.5-2018 (R2024) · ISO 1101:2017 · ISO 2692</span><span>Interpretación de planos · Módulo 6</span></div>
+</main><script type="module" src="main.js"></script></body></html>

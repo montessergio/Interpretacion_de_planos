@@ -1,0 +1,17 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Calculadora de ajustes ISO 286</title><link rel="stylesheet" href="../_shared/lab.css"></head><body><main class="hoja">
+<h1>Calculadora de ajustes ISO 286</h1>
+<p class="sub">Límites de agujeros y ejes, holguras y tipo de ajuste. Alcance: 0 &lt; D ≤ 500 mm (c, r, s hasta 120 mm). Datos de nivel B: verifique contra ISO 286-2 antes de fabricar.</p>
+<form id="f" class="panel fila" onsubmit="return false">
+  <label>Tamaño nominal (mm)<input id="d" type="number" min="0.1" max="500" step="any" value="25"></label>
+  <label>Agujero (mayúscula)<input id="h" value="H7" size="6" maxlength="5" list="lh" autocomplete="off"></label>
+  <label>Eje (minúscula)<input id="s" value="g6" size="6" maxlength="5" list="ls" autocomplete="off"></label>
+  <label>Ajuste preferente<select id="pref"></select></label>
+  <datalist id="lh"><option>H6<option>H7<option>H8<option>H9<option>H11<option>G7<option>F8<option>E9<option>D9<option>K7<option>N7<option>P7<option>S7<option>JS7</datalist>
+  <datalist id="ls"><option>h6<option>h7<option>g6<option>f7<option>e8<option>d9<option>c11<option>k6<option>m6<option>n6<option>p6<option>r6<option>s6<option>js6</datalist>
+</form>
+<p id="err" class="error" role="alert"></p>
+<div class="fila"><div class="panel" style="flex:1 1 360px"><div id="tabla" aria-live="polite"></div></div>
+<div class="panel" style="flex:1 1 360px"><svg id="zonas" viewBox="0 0 400 270" width="100%" role="img" aria-label="Zonas de tolerancia respecto de la línea cero"></svg></div></div>
+<p class="sub">Convención: holgura = agujero − eje. Desviaciones en µm; 1 milésima de pulgada (thou) = 25.4 µm.</p>
+<div class="cajetin"><span>ISO 286-1:2010 · ISO 286-2:2010</span><span>Escala: 1:1 (µm)</span><span>Interpretación de planos · Módulo 5</span></div>
+</main><script type="module" src="main.js"></script></body></html>

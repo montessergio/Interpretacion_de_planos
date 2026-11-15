@@ -1,0 +1,8 @@
+{"preguntas":[
+{"q":"¿Cuáles son los límites de un agujero Ø25 H7?","o":["+21 µm / 0","+13 µm / 0","0 / −21 µm","+25 µm / +4 µm"],"c":0,"e":"IT7 para el intervalo 18–30 mm es 21 µm y H tiene desviación inferior cero: +0.021 / 0 mm.","n":"ISO 286-1:2010 · ISO 286-2:2010"},
+{"q":"El ajuste Ø25 H7/g6 es…","o":["Con holgura (mín. 7 µm, máx. 41 µm)","Con interferencia","De transición","Con holgura nula siempre"],"c":0,"e":"H7: 0/+21; g6: −7/−20. Holgura mínima = 0 − (−7) = 7 µm; máxima = 21 − (−20) = 41 µm.","n":"ISO 286"},
+{"q":"El ajuste Ø25 H7/p6 es…","o":["Con interferencia (1 a 35 µm)","Con holgura","De transición","Deslizante"],"c":0,"e":"p6: +35/+22. Holgura mínima = 0 − 35 = −35 y máxima = 21 − 22 = −1: siempre hay apriete.","n":"ISO 286"},
+{"q":"En el sistema de agujero base, ¿qué letra de agujero se usa y cuál es su desviación inferior?","o":["H, con EI = 0","h, con es = 0","G, con EI = 0","JS, con EI = 0"],"c":0,"e":"Agujero base: H (EI = 0) con distintas letras de eje. Eje base: h (es = 0) con distintas letras de agujero.","n":"ISO 286-1:2010"},
+{"q":"¿Qué documento ISO integró en 2010 el sistema ISO de tolerancias y sustituyó, entre otras, a ISO 1829:1975?","o":["ISO 286-1:2010","ISO 2768-1","ISO 1101","ISO 5459"],"c":0,"e":"ISO 286-1:2010 cancela y reemplaza a ISO 286-1:1988 e ISO 1829:1975. ISO 286-2:2010 contiene las tablas de desviaciones límite.","n":"ISO 286-1:2010"},
+{"q":"¿Cuál es el grado de tolerancia normalizado IT7 para un tamaño de 50 mm?","o":["25 µm","16 µm","39 µm","30 µm"],"c":0,"e":"50 mm pertenece al intervalo 30–50 (incluye el límite superior): IT7 = 25 µm. El intervalo 50–80 empieza a partir de 50 mm exclusive.","n":"ISO 286-1:2010 tabla 1"}
+]}

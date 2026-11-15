@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Convertidor metrico-ingles</title><link rel="stylesheet" href="../_shared/lab.css"></head><body><main class="hoja">
+<h1>Convertidor métrico ↔ inglés</h1>
+<p class="sub">Longitudes, tolerancias y rugosidad. 1 in = 25.4 mm exactos. Referencia dimensional: 20 °C (68 °F).</p>
+<form class="panel fila" onsubmit="return false"><label>Valor<input id="v" type="number" step="any" value="0.005"></label>
+<label>Unidad<select id="u"><option>in<option>mm<option>µm<option>thou<option>µin</select></label></form>
+<div class="panel"><table id="t"></table></div>
+<div class="panel"><h2>Tolerancias bilaterales frecuentes</h2><table id="tol"></table></div>
+<div class="panel"><h2>Temperatura de referencia</h2><label>°C<input id="c" type="number" value="20" step="any"></label> = <strong id="f"></strong> °F</div>
+<div class="cajetin"><span>Equivalencia exacta 1 in = 25.4 mm</span><span>Interpretación de planos · Módulo 3</span></div>
+</main><script type="module" src="main.js"></script></body></html>

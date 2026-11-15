@@ -1,0 +1,8 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Visor de modelos GLB</title><link rel="stylesheet" href="../_shared/lab.css"><script type="importmap">{"imports":{"three":"../_vendor/three/build/three.module.js","three/addons/":"../_vendor/three/examples/jsm/"}}</script></head><body><main class="hoja">
+<h1>Visor de modelos glTF / GLB</h1>
+<p class="sub">Arrastre un archivo <code>.glb</code> a la hoja o elíjalo abajo. Todo ocurre en su navegador: el archivo no se sube a ningún servidor. Para cargar un modelo del repositorio use <code>?modelo=ruta/relativa.glb</code>.</p>
+<div class="panel fila"><label>Archivo<input id="f" type="file" accept=".glb,.gltf"></label><label><span><input type="checkbox" id="alambre"> Alámbrico</span></label><label><span><input type="checkbox" id="ejes" checked> Ejes</span></label><label><span><input type="checkbox" id="oscuro"> Fondo oscuro</span></label></div>
+<p id="msg" class="error" role="alert"></p><p id="info" class="sub"></p>
+<div class="panel"><div id="gl" style="position:relative;aspect-ratio:16/10;width:100%;touch-action:none;border:1px solid #9aa8bd;background:#fff"></div></div>
+<div class="cajetin"><span>glTF 2.0 (Khronos) · three.js GLTFLoader</span><span>Interpretación de planos · Modelos 3D</span></div>
+</main><script type="module" src="main.js"></script></body></html>

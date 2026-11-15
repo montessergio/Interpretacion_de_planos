@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Laboratorio de rugosidad</title><link rel="stylesheet" href="../_shared/lab.css"></head><body><main class="hoja">
+<h1>Laboratorio de rugosidad de perfil</h1>
+<p class="sub">Perfil sintético escalado a un Ra objetivo. Línea media simplificada (media aritmética); longitud de evaluación = 5 longitudes de muestreo. Sirve para entender los parámetros, no para certificar mediciones.</p>
+<form class="panel fila" onsubmit="return false"><label>Proceso<select id="proc">
+<option value="1.6|0.03|0.4">Torneado de acabado (Ra 1.6)<option value="0.4|0.01|0.12">Rectificado (Ra 0.4)<option value="0.05|0.004|0.04">Lapeado (Ra 0.05)<option value="3.2|0.08|0.6">Fresado (Ra 3.2)<option value="12.5|0.2|1.5">Fundición en arena (Ra 12.5)</select></label>
+<label>Ra objetivo (µm)<input id="ra" type="number" step="any" min="0.01" value="1.6"></label><label>Semilla<input id="sem" type="number" value="3" min="1"></label><button id="nuevo" class="sec" type="button">Nuevo perfil</button></form>
+<div class="panel"><canvas id="c" width="1000" height="300" style="width:100%;height:auto;background:#fff;border:1px solid #9aa8bd" role="img" aria-label="Perfil de rugosidad con línea media y longitudes de muestreo"></canvas></div>
+<div class="fila"><div class="panel" style="flex:1 1 340px"><table id="par"></table></div><div class="panel" style="flex:1 1 340px"><table id="sec"></table><p class="sub" id="nota"></p></div></div>
+<div class="cajetin"><span>ISO 21920-2:2021 (sustituye a ISO 4287:1997) · ASME B46.1</span><span>Interpretación de planos · Módulo 4</span></div>
+</main><script type="module" src="main.js"></script></body></html>

@@ -1,0 +1,29 @@
+/* Estilo compartido de laboratorios: "hoja de dibujo" (papel, tinta azul-negra, acento azul de plumilla).
+   Los laboratorios se incrustan en iframes: siempre se ven como una hoja, tanto en tema claro como oscuro. */
+:root{--tinta:#14213d;--tinta-2:#46546e;--papel:#f6f8fb;--cuadricula:#dbe2ec;--acento:#0b6fa4;--acento-2:#c2410c;--alerta:#b3261e;--ok:#1b7f4b;--borde:#9aa8bd}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--tinta);background:var(--papel);
+ background-image:linear-gradient(var(--cuadricula) 1px,transparent 1px),linear-gradient(90deg,var(--cuadricula) 1px,transparent 1px);background-size:24px 24px}
+.hoja{max-width:1100px;margin:0 auto;padding:16px 18px 56px;position:relative;min-height:100vh}
+h1{font-size:1.25rem;margin:0 0 2px;letter-spacing:.01em}h2{font-size:1rem;margin:18px 0 6px}
+.sub{margin:0 0 14px;color:var(--tinta-2)}
+.panel{background:rgba(255,255,255,.88);border:1.5px solid var(--tinta);padding:12px 14px;margin:10px 0}
+.fila{display:flex;flex-wrap:wrap;gap:12px 18px;align-items:flex-end}
+label{display:flex;flex-direction:column;gap:3px;font-size:.85rem;color:var(--tinta-2)}
+input,select,button{font:inherit;color:var(--tinta);background:#fff;border:1.5px solid var(--borde);border-radius:3px;padding:6px 8px;min-height:36px}
+input[type=range]{padding:0;min-height:28px;accent-color:var(--acento)}
+input[type=checkbox],input[type=radio]{min-height:auto;accent-color:var(--acento)}
+button{cursor:pointer;background:var(--tinta);color:#fff;border-color:var(--tinta)}
+button.sec{background:#fff;color:var(--tinta)}
+button:hover{filter:brightness(1.12)}
+:focus-visible{outline:3px solid var(--acento);outline-offset:2px}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.9rem}
+th,td{border:1px solid var(--borde);padding:4px 8px;text-align:right}th:first-child,td:first-child{text-align:left}
+th{background:#e8edf4}
+.ok{color:var(--ok);font-weight:600}.mal{color:var(--alerta);font-weight:600}.aviso{color:var(--acento-2)}
+.error{color:var(--alerta);font-weight:600;min-height:1.4em}
+.cajetin{position:absolute;left:18px;right:18px;bottom:10px;border:1.5px solid var(--tinta);background:rgba(255,255,255,.92);display:flex;flex-wrap:wrap;font-size:.75rem;color:var(--tinta-2)}
+.cajetin span{padding:3px 10px;border-right:1px solid var(--borde)}.cajetin span:last-child{border:0;margin-left:auto}
+svg text{font-family:inherit}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

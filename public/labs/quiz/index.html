@@ -1,0 +1,8 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz de repaso</title><link rel="stylesheet" href="../_shared/lab.css"></head><body><main class="hoja">
+<h1>Quiz de repaso</h1>
+<p class="sub">Preguntas por módulo con explicación y norma de referencia. Intente primero, luego lea la explicación. Su mejor puntaje se guarda sólo en este navegador.</p>
+<form class="panel fila" onsubmit="return false"><label>Banco<select id="banco"></select></label><button id="ini" type="button">Comenzar</button><span id="mejor" class="sub"></span></form>
+<p id="err" class="error" role="alert"></p>
+<section id="juego" class="panel" hidden aria-live="polite"></section>
+<div class="cajetin"><span>Los bancos son archivos JSON en <code>bancos/</code>: agregue preguntas sin tocar el código</span><span>Interpretación de planos</span></div>
+</main><script type="module" src="main.js"></script></body></html>

@@ -1,0 +1,26 @@
+[
+  {
+    "archivo": "modulo-01.json",
+    "titulo": "Módulo 1 · Interpretación de planos y dibujos"
+  },
+  {
+    "archivo": "modulo-02.json",
+    "titulo": "Módulo 2 · Simbología en planos"
+  },
+  {
+    "archivo": "modulo-03.json",
+    "titulo": "Módulo 3 · Dimensionamiento y tolerancias"
+  },
+  {
+    "archivo": "modulo-04.json",
+    "titulo": "Módulo 4 · Rugosidad y acabados"
+  },
+  {
+    "archivo": "modulo-05.json",
+    "titulo": "Módulo 5 · Ajustes y tolerancias ISO"
+  },
+  {
+    "archivo": "modulo-06.json",
+    "titulo": "Módulo 6 · ASME Y14.5 y GD&T"
+  }
+]

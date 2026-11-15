@@ -1,0 +1,10 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Vista explosionada con lista de materiales</title><link rel="stylesheet" href="../_shared/lab.css"><script type="importmap">{"imports":{"three":"../_vendor/three/build/three.module.js","three/addons/":"../_vendor/three/examples/jsm/"}}</script></head><body><main class="hoja">
+<h1>Vista explosionada y lista de materiales (BOM)</h1>
+<p class="sub">Conjunto eje–rodamiento–carcasa. Mueva el control para separar las piezas; pase el cursor sobre una pieza o una fila para vincularlas. Arrastre para girar y use la rueda para acercar.</p>
+<div class="panel fila"><label style="min-width:240px">Explosión <input id="t" type="range" min="0" max="100" value="0"></label>
+<label><span><input type="checkbox" id="globos" checked> Globos de posición</span></label><label><span><input type="checkbox" id="alambre"> Alámbrico</span></label><button id="rest" class="sec" type="button">Restablecer vista</button></div>
+<p id="aviso" class="error" role="alert"></p>
+<div class="fila" style="align-items:flex-start"><div class="panel" style="flex:3 1 480px"><div id="cont" style="position:relative;aspect-ratio:4/3;width:100%;background:#fff;border:1px solid #9aa8bd;touch-action:none"><div id="gl" style="position:absolute;inset:0"></div><div id="gb" style="position:absolute;inset:0;pointer-events:none"></div></div></div>
+<div class="panel" style="flex:2 1 360px"><h2>Lista de materiales</h2><table id="bom"></table><p class="sub">La casilla oculta o muestra la pieza. Datos de ejemplo con fines didácticos.</p></div></div>
+<div class="cajetin"><span>Dibujo de conjunto · lista de partes</span><span>Rodamiento: ISO 15 (6205) · Tornillo: ISO 4017</span><span>Interpretación de planos · Módulo 1</span></div>
+</main><script type="module" src="main.js"></script></body></html>
