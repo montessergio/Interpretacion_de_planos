@@ -1,0 +1,47 @@
+---
+title: "6.3 Modificadores, bonus y sujetadores"
+description: "MMC, LMC y RFS; tolerancia bonus; condición virtual; sujetadores fijos y flotantes con laboratorio interactivo."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+## MMC, LMC y RFS
+
+| Modificador | Significado | Efecto |
+|---|---|---|
+| **Ⓜ MMC** | Condición de máximo material | Al apartarse el tamaño del MMC se gana tolerancia geométrica adicional (**bonus**) |
+| **Ⓛ LMC** | Condición de mínimo material | Bonus al apartarse del LMC (control de espesores de pared) |
+| **RFS** (por defecto) | Sin importar el tamaño | La tolerancia geométrica es fija |
+
+## Bonus
+
+- Agujero con Ⓜ: **bonus = tamaño real − tamaño mínimo** (MMC).
+- Eje con Ⓜ: **bonus = tamaño máximo (MMC) − tamaño real**.
+- **Tolerancia admisible = tolerancia indicada + bonus.**
+
+**Ejemplo resuelto.** Agujero Ø10.0 – 10.2 con posición Ø0.2 Ⓜ; tamaño real 10.15. Bonus = 10.15 − 10.0 = 0.15; admisible = 0.2 + 0.15 = **Ø0.35**. Un centro desviado (x, y) = (0.12, 0.10) da Ø = 2 √(0.12² + 0.10²) = **0.312** → **conforme**.
+
+## Condición virtual y resultante
+
+- Con Ⓜ, **condición virtual** (peor caso de ensamble): elemento externo = MMC + tolerancia; interno = MMC − tolerancia. Ejemplo: agujero MMC 10.0 con Ø0.2 Ⓜ → 9.8.
+- Con Ⓛ se habla de **condición resultante**.
+
+## Sujetadores fijos y flotantes
+
+Con H = agujero de paso en MMC (tamaño mínimo) y F = sujetador en MMC (diámetro máximo):
+
+| Montaje | Tolerancia de posición diametral |
+|---|---|
+| **Flotante** (los dos elementos tienen agujero de paso) | T = H − F |
+| **Fijo** (uno tiene agujero roscado o prensado) | T = (H − F) / 2 por pieza |
+
+**Ejemplo.** M6 con agujero de paso medio de 6.6 mm (ISO 273) y sujetador de 6.0 mm: flotante T = **0.6 mm**; fijo T = **0.3 mm** por pieza. Estas fórmulas suponen que la perpendicularidad es despreciable y que no hay otras fuentes de variación; ⚠️ confirme el método en la edición vigente.
+
+## Laboratorio
+
+<Lab id="gdt-posicion" alto={880} titulo="GD&T: posición con MMC y sujetadores" />
+
+## Cuándo no usar Ⓜ
+
+- Cuando la función depende de una ubicación fija (sellado, centrado rígido): use **RFS**.
+- Cuando el bonus compromete la resistencia (espesores de pared, rodamientos): considere **Ⓛ**.
