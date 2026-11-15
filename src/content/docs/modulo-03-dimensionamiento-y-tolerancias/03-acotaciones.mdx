@@ -1,0 +1,62 @@
+---
+title: "3.3 Acotaciones en dibujos"
+description: "Reglas de acotación según ISO 129-1 y ASME Y14.5, métodos en cadena y desde referencia, notación de elementos y equivalencias métrico-inglés."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+## Elementos de una cota
+
+**Línea de cota** (con flechas), **líneas de extensión**, **valor numérico** y, si procede, **tolerancia y símbolo**. Las flechas se cierran con proporción ≈ 3:1 (ASME) o 15–30° (ISO); ⚠️ detalles por verificar en la edición vigente.
+
+## Reglas básicas
+
+1. **Cada característica se acota una sola vez** y en la vista donde se ve su forma.
+2. Acote fuera de la vista, con las cotas más pequeñas más cerca del contorno.
+3. Evite **cadenas cerradas** (redundancia): una cota debe omitirse o marcarse **de referencia** `(25)`.
+4. Las cotas se leen desde abajo (ASME: dirección única) o desde abajo y la derecha (ISO: cotas alineadas con la línea de cota).
+5. No acote sobre líneas ocultas; use cortes.
+6. Acote a **referencias funcionales** (datums), no a lo que sea cómodo dibujar.
+
+ISO 129-1 clasifica las cotas en **funcionales**, **no funcionales** y **auxiliares**. ⚠️ (edición vigente por verificar).
+
+## Métodos de acotación
+
+| Método | Cómo es | Efecto en tolerancias |
+|---|---|---|
+| En cadena (serie) | Cada cota se mide desde la anterior | **Acumula** tolerancias |
+| Paralelo / desde referencia | Todas parten de la misma superficie | No acumula: cada cota depende sólo de su tolerancia |
+| Coordenadas / tabular | Cotas de posición en tabla | Eficiente para muchos agujeros y CNC |
+
+**Ejemplo.** Tres escalones con ±0.1 mm cada uno. En cadena, el último queda a ±0.3 mm de la referencia (peor caso). Desde referencia, cada uno mantiene ±0.1 mm.
+
+## Notación de elementos repetidos y especiales
+
+| Notación | Significado |
+|---|---|
+| 4× Ø6 (ISO) · 4X Ø6 (ASME) | Cuatro agujeros iguales |
+| Ø12 H7 ↧ 15 | Agujero Ø12 H7 con profundidad 15 mm |
+| M8×1.25-6H ↧ 14 | Rosca métrica fina con profundidad |
+| 2×45° | Chaflán a 45° de 2 mm |
+| (25) | Cota de referencia (no se inspecciona por sí sola) |
+| Cota subrayada | Fuera de escala (en ISO) |
+
+## Sistema métrico frente a inglés
+
+| Aspecto | Métrico (ISO / ASME métrico) | Inglés (ASME pulgadas decimales) |
+|---|---|---|
+| Unidad base | mm (se declara en el cajetín) | in (se declara en el cajetín) |
+| Cero inicial | Se escribe: 0.5 | Se omite: .500 |
+| Decimales | Sin ceros finales innecesarios | Mismo número de decimales que la tolerancia |
+| Fracciones | No se usan | Se prefiere decimal; las fracciones se evitan |
+| Doble acotación | Poco frecuente | Posible con la segunda unidad entre corchetes |
+
+⚠️ Reglas de ASME Y14.5-2018 §4: **verifique la redacción exacta** en la norma.
+
+## Laboratorio: convertidor métrico ↔ inglés
+
+<Lab id="convertidor-unidades" alto={620} titulo="Convertidor métrico–inglés" />
+
+## Acotar para el proceso
+
+Una buena acotación **sigue la secuencia de fabricación e inspección**: elija como referencia la cara que se maquina primero o que fija la pieza en la máquina; así el plano, el dispositivo y el plan de inspección hablan el mismo idioma.
