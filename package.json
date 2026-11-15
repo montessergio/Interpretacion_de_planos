@@ -1,0 +1,29 @@
+{
+  "name": "interpretacion-de-planos",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Material de estudio interactivo para interpretación de planos (ingeniería industrial).",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "test": "node --test \"tests/**/*.test.mjs\"",
+    "generar:tablas": "node tools/generar-tablas.mjs",
+    "verificar": "node tools/verificar-convenciones.mjs",
+    "nuevo-modulo": "node tools/nuevo-modulo.mjs",
+    "figuras": "python3 tools/generar-figuras.py",
+    "enlaces": "node tools/comprobar-enlaces.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "0.43.1",
+    "astro": "7.4.12",
+    "astro-mermaid": "2.2.0",
+    "mermaid": "12.3.0",
+    "sharp": "0.35.5",
+    "three": "0.187.0"
+  }
+}

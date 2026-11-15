@@ -1,0 +1,10 @@
+---
+/** Incrusta un laboratorio de public/labs/<id>/ en una página .mdx.  Uso: <Lab id="calculadora-iso286" alto={640} titulo="..." /> */
+interface Props { id: string; alto?: number; titulo?: string }
+const { id, alto = 640, titulo = id } = Astro.props;
+const src = `${import.meta.env.BASE_URL.replace(/\/$/, '')}/labs/${id}/`;
+---
+<div class="lab-embed">
+  <iframe src={src} title={titulo} loading="lazy" style={`height:${alto}px`} allowfullscreen></iframe>
+  <p class="lab-pie"><a href={src} target="_blank" rel="noopener">Abrir en pestaña nueva ↗</a> · requiere JavaScript activado</p>
+</div>

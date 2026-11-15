@@ -1,0 +1,12 @@
+/* Acento azul de plumilla técnica; coherente con los laboratorios. */
+:root { --sl-color-accent-low: #0d3a56; --sl-color-accent: #1a8fcb; --sl-color-accent-high: #a9d8f0; }
+:root[data-theme='light'] { --sl-color-accent-low: #cfe6f3; --sl-color-accent: #0b6fa4; --sl-color-accent-high: #064a70; }
+.lab-embed { margin: 1.25rem 0; }
+.lab-embed iframe { width: 100%; border: 1px solid var(--sl-color-gray-4); border-radius: 6px; background: #f6f8fb; display: block; }
+.lab-pie { font-size: var(--sl-text-sm); color: var(--sl-color-gray-3); margin-top: .4rem !important; }
+.sl-markdown-content table { font-variant-numeric: tabular-nums; }
+.sl-markdown-content details { border: 1px solid var(--sl-color-gray-5); border-radius: 6px; padding: .5rem .9rem; margin: .8rem 0; }
+.sl-markdown-content details > summary { cursor: pointer; font-weight: 600; }
+.sl-markdown-content figure { margin: 1rem 0; }
+.sl-markdown-content img[src$='.svg'] { background: #fff; border-radius: 6px; padding: .5rem; max-width: 100%; }
+@media print { .lab-embed iframe { display: none; } }

@@ -1,0 +1,17 @@
+name: Error técnico
+description: Un dato, fórmula, tabla, figura o solución es incorrecto.
+title: "[Error] "
+labels: ["error-tecnico"]
+body:
+  - type: input
+    id: pagina
+    attributes: { label: Página o laboratorio, placeholder: "modulo-05-ajustes-iso/01-simbologia-y-ajustes" }
+    validations: { required: true }
+  - type: textarea
+    id: dato
+    attributes: { label: Dato incorrecto y valor que considera correcto }
+    validations: { required: true }
+  - type: textarea
+    id: fuente
+    attributes: { label: Fuente que lo respalda (norma, edición, cláusula o tabla), description: "Los textos de pago no se pegan completos: indique la referencia exacta." }
+    validations: { required: true }

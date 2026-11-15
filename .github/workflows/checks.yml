@@ -1,0 +1,28 @@
+name: Verificaciones de pull request
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verificar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run verificar
+      - run: npm run generar:tablas -- --check
+      - run: npm run build
+      - run: npm run enlaces
+      - name: Auditoría de dependencias (informativa)
+        run: npm audit --omit=dev --audit-level=high
+        continue-on-error: true

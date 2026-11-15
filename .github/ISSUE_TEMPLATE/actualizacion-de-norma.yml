@@ -1,0 +1,17 @@
+name: Actualización de norma
+description: Se publicó, retiró o reemplazó una norma citada.
+title: "[Norma] "
+labels: ["normas"]
+body:
+  - type: input
+    id: norma
+    attributes: { label: Norma y edición anterior, placeholder: "ISO 2768-1:1989" }
+    validations: { required: true }
+  - type: input
+    id: nueva
+    attributes: { label: Edición vigente o reemplazo }
+    validations: { required: true }
+  - type: input
+    id: fuente
+    attributes: { label: Enlace al catálogo del organismo o fuente primaria }
+    validations: { required: true }

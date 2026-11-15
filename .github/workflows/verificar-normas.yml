@@ -1,0 +1,22 @@
+name: Revisión semestral de vigencia de normas
+
+on:
+  schedule:
+    - cron: "0 14 1 5,11 *" # 1 de mayo y 1 de noviembre
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  abrir-issue:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Crear issue de revisión
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh label create normas --description "Vigencia de normas" --color 0b6fa4 --force
+          gh issue create --title "Revisión de vigencia de normas ($(date -u +%F))" --label normas --body-file .github/revision-normas.md

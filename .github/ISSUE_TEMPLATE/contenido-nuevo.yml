@@ -1,0 +1,16 @@
+name: Propuesta de contenido
+description: Un tema, ejercicio, caso práctico, laboratorio o módulo nuevo.
+title: "[Propuesta] "
+labels: ["contenido"]
+body:
+  - type: dropdown
+    id: tipo
+    attributes: { label: Tipo, options: [Tema nuevo, Ejercicio o caso práctico, Laboratorio interactivo, Módulo nuevo, Mejora de figura] }
+    validations: { required: true }
+  - type: textarea
+    id: descripcion
+    attributes: { label: Descripción y objetivo de aprendizaje }
+    validations: { required: true }
+  - type: textarea
+    id: fuentes
+    attributes: { label: Normas y fuentes previstas }

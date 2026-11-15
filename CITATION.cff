@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "Si usa este material, cítelo con estos datos y mencione el nivel de verificación de las normas."
+title: "Interpretación de planos: material de estudio interactivo para ingeniería industrial"
+type: software
+authors:
+  - alias: "Montessergio"
+version: 1.0.0
+date-released: "2026-11-14"
+license: [CC-BY-SA-4.0, MIT]
+repository-code: "https://github.com/Montessergio/Interpretacion_de_planos"
+url: "https://montessergio.github.io/Interpretacion_de_planos/"
+keywords: [dibujo técnico, tolerancias, ISO 286, GD&T, ASME Y14.5, rugosidad, ingeniería industrial]
+language: es
