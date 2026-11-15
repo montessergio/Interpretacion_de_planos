@@ -1,0 +1,29 @@
+---
+title: "Vistas ortogonales: modelo 3D y vistas"
+description: "Gire una pieza en 3D y vea sus vistas con aristas ocultas; alterne entre proyección de primer y tercer ángulo."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Gire una pieza en 3D y vea sus vistas con aristas ocultas; alterne entre proyección de primer y tercer ángulo. **Relacionado con:** Módulo 1.
+
+<Lab id="vistas-ortogonales" alto={760} titulo="Vistas ortogonales: modelo 3D y vistas" />
+
+## Cómo usarlo
+
+1. Arrastre en el modelo 3D para girarlo.
+2. Cambie entre **primer** y **tercer ángulo** y observe dónde se coloca cada vista.
+3. Active las **guías de proyección** para ver cómo se transfieren las cotas entre vistas.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** **three.js** (r187, vendorizado en `public/labs/_vendor/three/`). Las aristas ocultas se dibujan con una pasada de líneas discontinuas con prueba de profundidad invertida.
+- **Archivo fuente necesario:** Ninguno: la pieza se genera por código (perfil en L extruido con agujero y chaflán). Para un modelo propio, se necesita un archivo `.glb` y definir sus aristas (ver [guía](../../guia/03-modelos-interactivos/)).
+- **Integración en el sitio:** la carpeta `public/labs/vistas-ortogonales/` se publica tal cual y se incrusta con `<Lab id="vistas-ortogonales" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- Requiere WebGL 2.
+- Las líneas ocultas sólo son correctas para aristas definidas explícitamente (no hay extracción automática de silueta).
+- El grosor de línea es de 1 píxel (limitación de WebGL).
+- Sitio estático: no se pueden subir ni convertir archivos CAD en el servidor.

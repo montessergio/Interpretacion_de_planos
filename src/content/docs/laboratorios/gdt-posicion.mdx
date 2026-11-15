@@ -1,0 +1,27 @@
+---
+title: "GD&T: posición con MMC y sujetadores"
+description: "Calcule bonus, tolerancia admisible, condición virtual y la tolerancia de posición de sujetadores fijos y flotantes."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Calcule bonus, tolerancia admisible, condición virtual y la tolerancia de posición de sujetadores fijos y flotantes. **Relacionado con:** Módulo 6.
+
+<Lab id="gdt-posicion" alto={880} titulo="GD&T: posición con MMC y sujetadores" />
+
+## Cómo usarlo
+
+1. Elija agujero o eje, el modificador (MMC, LMC, RFS) y los límites de tamaño.
+2. Ingrese el tamaño real y la desviación del centro (x, y).
+3. Use la sección de **sujetadores** con agujeros de paso de ISO 273.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** JavaScript puro + SVG; lógica en `public/labs/_shared/gdt-core.js`, con pruebas en `tests/laboratorios.test.mjs`.
+- **Archivo fuente necesario:** Ninguno.
+- **Integración en el sitio:** la carpeta `public/labs/gdt-posicion/` se publica tal cual y se incrusta con `<Lab id="gdt-posicion" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- Modelo 2D simplificado (posición con zona cilíndrica).
+- Las fórmulas de sujetadores suponen despreciable la variación de orientación; confirme el método en la norma vigente.

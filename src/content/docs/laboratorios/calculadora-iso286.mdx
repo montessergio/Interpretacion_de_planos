@@ -1,0 +1,28 @@
+---
+title: "Calculadora de ajustes ISO 286"
+description: "Calcule límites de agujeros y ejes, holguras, apriete y tipo de ajuste, con diagrama de zonas de tolerancia."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Calcule límites de agujeros y ejes, holguras, apriete y tipo de ajuste, con diagrama de zonas de tolerancia. **Relacionado con:** Módulo 5.
+
+<Lab id="calculadora-iso286" alto={720} titulo="Calculadora de ajustes ISO 286" />
+
+## Cómo usarlo
+
+1. Escriba el tamaño nominal y las clases (por ejemplo **H7** y **g6**) o elija un ajuste preferente.
+2. Lea ES/EI, tamaños máximo y mínimo, holgura mínima y máxima y el tipo de ajuste.
+3. Compare con los ejercicios del [Módulo 5](../../modulo-05-ajustes-iso/ejercicios/).
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** JavaScript puro (módulo ES) + SVG. El núcleo `public/labs/_shared/iso286-core.js` es la **fuente única de datos**: lo usan la calculadora, el generador de tablas y las pruebas.
+- **Archivo fuente necesario:** Ninguno. Los datos están en el código y se verifican con `npm test` (`tests/iso286.test.mjs`).
+- **Integración en el sitio:** la carpeta `public/labs/calculadora-iso286/` se publica tal cual y se incrusta con `<Lab id="calculadora-iso286" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- Alcance: 0 < D ≤ 500 mm; las clases c, r, s sólo hasta 120 mm; K, M, N hasta IT8; P, R, S hasta IT7.
+- Datos de nivel 🟡 (la norma es de pago): confirme en ISO 286-2 antes de fabricar.
+- Sin backend: no guarda resultados.

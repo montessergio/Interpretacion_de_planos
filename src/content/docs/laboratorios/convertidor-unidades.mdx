@@ -1,0 +1,26 @@
+---
+title: "Convertidor métrico–inglés"
+description: "Convierta mm, in, µm, thou y µin y consulte tolerancias frecuentes y la conversión °C ↔ °F."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Convierta mm, in, µm, thou y µin y consulte tolerancias frecuentes y la conversión °C ↔ °F. **Relacionado con:** Módulo 3.
+
+<Lab id="convertidor-unidades" alto={620} titulo="Convertidor métrico–inglés" />
+
+## Cómo usarlo
+
+1. Escriba un valor y elija su unidad.
+2. Lea las demás unidades.
+3. Consulte la tabla de tolerancias en pulgadas y milímetros.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** JavaScript puro; lógica en `public/labs/_shared/conversion-core.js` (1 in = 25.4 mm exacto).
+- **Archivo fuente necesario:** Ninguno.
+- **Integración en el sitio:** la carpeta `public/labs/convertidor-unidades/` se publica tal cual y se incrusta con `<Lab id="convertidor-unidades" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- Muestra 7 cifras significativas: **redondee la tolerancia sin ampliarla** al pasarla al plano.

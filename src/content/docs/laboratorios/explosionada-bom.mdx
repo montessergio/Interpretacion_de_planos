@@ -1,0 +1,28 @@
+---
+title: "Vista explosionada y lista de materiales"
+description: "Conjunto eje–rodamiento–carcasa con explosión controlable, globos de posición y lista de materiales vinculada."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Conjunto eje–rodamiento–carcasa con explosión controlable, globos de posición y lista de materiales vinculada. **Relacionado con:** Módulo 1.
+
+<Lab id="explosionada-bom" alto={760} titulo="Vista explosionada y lista de materiales" />
+
+## Cómo usarlo
+
+1. Mueva el control **Explosión** para separar las piezas a lo largo del eje.
+2. Pase el cursor sobre una pieza o una fila de la BOM para resaltar su par.
+3. Oculte piezas con la casilla de cada fila para ver el interior.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** **three.js** con geometría procedural. Cada pieza tiene un vector de explosión; la BOM es una tabla HTML generada de los mismos datos.
+- **Archivo fuente necesario:** Ninguno en este ejemplo. Para un conjunto real: un `.glb` con **un nodo por pieza** y un JSON de BOM (descripción, cantidad, material, referencia).
+- **Integración en el sitio:** la carpeta `public/labs/explosionada-bom/` se publica tal cual y se incrusta con `<Lab id="explosionada-bom" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- Requiere WebGL 2.
+- Los modelos grandes aumentan el tiempo de carga y el uso de ancho de banda del sitio (límite suave de 100 GB/mes).
+- Sin exportación a PDF ni guardado de vistas.

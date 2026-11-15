@@ -1,0 +1,27 @@
+---
+title: "Quiz de repaso"
+description: "Preguntas con explicación y norma de referencia por módulo. Su mejor puntaje se guarda sólo en su navegador."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Preguntas con explicación y norma de referencia por módulo. Su mejor puntaje se guarda sólo en su navegador. **Relacionado con:** Todos.
+
+<Lab id="quiz" alto={620} titulo="Quiz de repaso" />
+
+## Cómo usarlo
+
+1. Elija un módulo (o todos) y pulse **Comenzar**.
+2. Responda, lea la explicación y continúe.
+3. Agregue preguntas editando los JSON de `public/labs/quiz/bancos/` sin tocar código.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** JavaScript puro con bancos de preguntas en **JSON** (`bancos/indice.json` y `modulo-NN.json`) y `localStorage` para el mejor puntaje.
+- **Archivo fuente necesario:** Archivos JSON de preguntas: `{ "q": ..., "o": [...], "c": índice, "e": explicación, "n": norma }`.
+- **Integración en el sitio:** la carpeta `public/labs/quiz/` se publica tal cual y se incrusta con `<Lab id="quiz" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- No hay ranking ni cuentas de usuario (sitio estático).
+- El almacenamiento local puede no estar disponible en modo privado.

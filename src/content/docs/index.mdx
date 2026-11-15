@@ -1,0 +1,31 @@
+---
+title: "Interpretación de planos"
+description: "Material de estudio interactivo para ingeniería industrial: planos, simbología, tolerancias, ajustes ISO, rugosidad y GD&T, con normas verificadas y laboratorios."
+template: splash
+hero:
+  tagline: "Material de estudio y consulta para ingeniería industrial, con normas verificadas a 2026-11-14 y laboratorios interactivos que funcionan en el navegador."
+  actions:
+    - text: Empezar a estudiar
+      link: ./guia/01-como-navegar-y-estudiar/
+      icon: right-arrow
+    - text: Ver laboratorios
+      link: ./laboratorios/
+      variant: minimal
+---
+
+import { LinkCard, CardGrid } from '@astrojs/starlight/components';
+
+## Módulos
+
+<CardGrid>
+  <LinkCard title="1 · Interpretación de planos y dibujos" description="Proyección, normas de representación, hojas, vistas y cortes." href="./modulo-01-interpretacion-de-planos/" />
+  <LinkCard title="2 · Simbología en planos" description="Mecánica, soldadura y tubería, eléctrica y electrónica, seguridad." href="./modulo-02-simbologia-en-planos/" />
+  <LinkCard title="3 · Dimensionamiento y tolerancias" description="Sistema métrico e inglés, tolerancias, acumulación y Cpk." href="./modulo-03-dimensionamiento-y-tolerancias/" />
+  <LinkCard title="4 · Rugosidad y acabados" description="Parámetros, valores, ISO 21920 y representación." href="./modulo-04-rugosidad-y-acabados/" />
+  <LinkCard title="5 · Ajustes y tolerancias ISO" description="ISO 286: IT, agujeros, ejes, holguras y apriete." href="./modulo-05-ajustes-iso/" />
+  <LinkCard title="6 · ASME Y14.5 y GD&T" description="Antecedentes, marcos de control, referencias y bonus." href="./modulo-06-asme-y14-5-gdt/" />
+</CardGrid>
+
+## Cómo se garantiza la actualidad
+
+Cada módulo trae una **ficha con la fecha de verificación** y una tabla de normas con su estado. Los datos se marcan con ✅ (fuente primaria), 🟡 (fuente secundaria o recálculo) o ⚠️ (pendiente de verificación). Lea la [advertencia sobre vigencia de normas](./guia/06-vigencia-de-normas/).

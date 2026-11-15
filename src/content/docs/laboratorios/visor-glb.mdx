@@ -1,0 +1,28 @@
+---
+title: "Visor de modelos glTF / GLB"
+description: "Cargue su propio modelo `.glb` desde su equipo y examínelo en 3D sin subirlo a ningún servidor."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Cargue su propio modelo `.glb` desde su equipo y examínelo en 3D sin subirlo a ningún servidor. **Relacionado con:** Modelos 3D.
+
+<Lab id="visor-glb" alto={640} titulo="Visor de modelos glTF / GLB" />
+
+## Cómo usarlo
+
+1. Arrastre un `.glb` a la hoja o use el selector de archivos.
+2. Active alámbrico o ejes para inspeccionar la malla.
+3. Para un modelo del repositorio, abra el visor con `?modelo=ruta/relativa.glb`.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** **three.js** `GLTFLoader` (vendorizado). Alternativa para visores simples: `<model-viewer>` de Google, que no requiere código propio.
+- **Archivo fuente necesario:** Un archivo `.glb`/`.gltf` exportado desde el CAD (STEP → glTF, con FreeCAD, Blender o CAD Assistant).
+- **Integración en el sitio:** la carpeta `public/labs/visor-glb/` se publica tal cual y se incrusta con `<Lab id="visor-glb" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- Sitio estático: **no convierte** STEP ni IGES; la conversión se hace antes, en su equipo.
+- El archivo se lee localmente; si usa `?modelo=`, el archivo debe estar en el sitio y respetar el límite de 1 GB del sitio publicado.
+- glTF es una representación visual: **no conserva** tolerancias ni GD&T semánticos.

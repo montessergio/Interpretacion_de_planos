@@ -1,0 +1,28 @@
+---
+title: "Laboratorio de rugosidad"
+description: "Genere un perfil sintético con un Ra objetivo y observe Ra, Rq, Rp, Rv, Rz por sección y Rsk."
+---
+
+import Lab from '../../../components/Lab.astro';
+
+Genere un perfil sintético con un Ra objetivo y observe Ra, Rq, Rp, Rv, Rz por sección y Rsk. **Relacionado con:** Módulo 4.
+
+<Lab id="rugosidad" alto={820} titulo="Laboratorio de rugosidad" />
+
+## Cómo usarlo
+
+1. Elija un proceso o escriba un Ra objetivo.
+2. Observe las cinco longitudes de muestreo y la línea media.
+3. Pulse **Nuevo perfil** para ver la variabilidad entre muestras.
+
+## Tecnología y archivos fuente
+
+- **Tecnología:** JavaScript puro + `<canvas>`. Los parámetros se calculan en `public/labs/_shared/rugosidad-core.js` (probado con perfiles senoidales de resultado analítico).
+- **Archivo fuente necesario:** Ninguno.
+- **Integración en el sitio:** la carpeta `public/labs/rugosidad/` se publica tal cual y se incrusta con `<Lab id="rugosidad" />`.
+
+## Limitaciones (sitio estático en GitHub Pages)
+
+- La línea media es la media aritmética (simplificación): no aplica el filtro gaussiano de las normas.
+- No sirve para certificar mediciones; es una herramienta didáctica.
+- El significado de «Rz» depende de la norma y la edición (ver [Módulo 4](../../modulo-04-rugosidad-y-acabados/01-nomenclatura/)).
